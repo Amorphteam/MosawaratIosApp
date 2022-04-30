@@ -66,7 +66,7 @@ struct BookList: View {
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("Background")/*@END_MENU_TOKEN@*/)
             
         }
-//        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
 
         
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),prompt: "ابحث عن عنوان المخطوطة أو مؤلفها أو مصدرها") {

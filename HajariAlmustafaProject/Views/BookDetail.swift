@@ -19,6 +19,8 @@ struct BookDetail: View {
             Text("صور المخطوطة")
                 .font(.footnote)
                 .padding(/*@START_MENU_TOKEN@*/.all, 6.0/*@END_MENU_TOKEN@*/)
+                .padding(.leading, 20)
+
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color("text"))
                 .opacity(/*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
@@ -50,13 +52,14 @@ struct BookDetail: View {
             Text("المعلومات العامة")
                 .font(.footnote)
                 .padding(/*@START_MENU_TOKEN@*/.all, 6.0/*@END_MENU_TOKEN@*/)
+                .padding(.leading, 20)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color("text"))
                 .opacity(/*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
             
             VStack {
                 
-                HStack(alignment: .bottom, spacing: 4){
+                HStack(alignment: .center, spacing: 4){
                     Text("المؤلف")
                         .font(.subheadline)
                         .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
@@ -76,7 +79,7 @@ struct BookDetail: View {
                 Group {
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("الناسخ")
                                 .font(.subheadline)
@@ -98,7 +101,7 @@ struct BookDetail: View {
                     
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("عدد الصفحات")
                                 .font(.subheadline)
@@ -121,7 +124,7 @@ struct BookDetail: View {
                     
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("المصدر")
                                 .font(.subheadline)
@@ -143,7 +146,7 @@ struct BookDetail: View {
                     }
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("نوع الخط")
                                 .font(.subheadline)
@@ -166,7 +169,7 @@ struct BookDetail: View {
                     
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("الموضوع")
                                 .font(.subheadline)
@@ -188,7 +191,7 @@ struct BookDetail: View {
                     }
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("تاريخ النسخ")
                                 .font(.subheadline)
@@ -210,7 +213,7 @@ struct BookDetail: View {
                     }
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("أوله")
                                 .font(.subheadline)
@@ -232,7 +235,7 @@ struct BookDetail: View {
                     
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("آخره")
                                 .font(.subheadline)
@@ -254,7 +257,7 @@ struct BookDetail: View {
                     
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("الملاحظات")
                                 .font(.subheadline)
@@ -297,7 +300,7 @@ struct BookDetail: View {
                     }
                     VStack {
                         Divider()
-                        HStack(alignment: .bottom, spacing: 4){
+                        HStack(alignment: .center, spacing: 4){
                             
                             Text("عدد الأسطر")
                                 .font(.subheadline)

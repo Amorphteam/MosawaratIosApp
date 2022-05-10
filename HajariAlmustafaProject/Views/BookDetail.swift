@@ -17,10 +17,9 @@ struct BookDetail: View {
         ScrollView {
             
             Text("صور المخطوطة")
-                .font(.footnote)
-                .padding(/*@START_MENU_TOKEN@*/.all, 6.0/*@END_MENU_TOKEN@*/)
+                .font(Font.custom("Tajawal-Regular", size: 14))
+                .padding(.all, 6.0)
                 .padding(.leading, 20)
-
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color("text"))
                 .opacity(/*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
@@ -50,7 +49,7 @@ struct BookDetail: View {
             
             
             Text("المعلومات العامة")
-                .font(.footnote)
+                .font(Font.custom("Tajawal-Regular", size: 14))
                 .padding(/*@START_MENU_TOKEN@*/.all, 6.0/*@END_MENU_TOKEN@*/)
                 .padding(.leading, 20)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -61,7 +60,7 @@ struct BookDetail: View {
                 
                 HStack(alignment: .center, spacing: 4){
                     Text("المؤلف")
-                        .font(.subheadline)
+                        .font(Font.custom("Tajawal-Regular", size: 16))
                         .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                         .frame(maxWidth: 100, alignment: .leading)
                         .padding(.horizontal, 4.0)
@@ -69,10 +68,10 @@ struct BookDetail: View {
                     
                     Text(book.details.author_name)
                         .foregroundColor(Color("text"))
-                        .font(.subheadline)
+                        .font(Font.custom("Tajawal-Regular", size: 16))
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: 900, alignment: .leading)
-
+                        .lineSpacing(10)
                     
                 }
                 .padding(.all, 16.0)
@@ -82,7 +81,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("الناسخ")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .padding(.horizontal, 4.0)
                                 .frame(maxWidth: 100, alignment: .leading)
@@ -90,9 +89,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.writer_name)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -104,7 +104,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("عدد الصفحات")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -113,9 +113,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.page_count)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -127,7 +128,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("المصدر")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -136,9 +137,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.source)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -149,7 +151,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("نوع الخط")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -158,9 +160,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.font_type)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -172,7 +175,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("الموضوع")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -181,9 +184,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.category)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -194,7 +198,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("تاريخ النسخ")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -203,9 +207,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.writing_date)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }
@@ -216,7 +221,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("أوله")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -225,9 +230,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.note1)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                         }
                         .padding(.all, 16.0)
@@ -238,7 +244,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("آخره")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -247,9 +253,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.note2)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                         }
                         .padding(.all, 16.0)
@@ -260,7 +267,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("الملاحظات")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -270,28 +277,34 @@ struct BookDetail: View {
                                 
                                 Text(book.details.note3)
                                     .foregroundColor(Color("text"))
-                                    .font(.subheadline)
+                                    .font(Font.custom("Tajawal-Regular", size: 16))
                                     .multilineTextAlignment(.leading)
                                     .allowsTightening(true)
                                     .minimumScaleFactor(0.75)
                                     .frame(maxWidth: 900, alignment: .leading)
+                                    .lineSpacing(10)
+
 
                                 
                                 Text(book.details.note4)
                                     .foregroundColor(Color("text"))
-                                    .font(.subheadline)
+                                    .font(Font.custom("Tajawal-Regular", size: 16))
                                     .multilineTextAlignment(.leading)
                                     .allowsTightening(true)
                                     .minimumScaleFactor(0.75)
                                     .frame(maxWidth: 900, alignment: .leading)
+                                    .lineSpacing(10)
+                                    .padding(.vertical, 2.0)
 
                                 Text(book.details.note5)
                                     .foregroundColor(Color("text"))
-                                    .font(.subheadline)
+                                    .font(Font.custom("Tajawal-Regular", size: 16))
                                     .multilineTextAlignment(.leading)
                                     .allowsTightening(true)
                                     .minimumScaleFactor(0.75)
                                     .frame(maxWidth: 900, alignment: .leading)
+                                    .lineSpacing(10)
+
 
                                 
                             }
@@ -303,7 +316,7 @@ struct BookDetail: View {
                         HStack(alignment: .center, spacing: 4){
                             
                             Text("عدد الأسطر")
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .foregroundColor(Color(red: 0.4117647058823529, green: 0.40784313725490196, blue: 0.40784313725490196))
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal, 4.0)
@@ -312,9 +325,10 @@ struct BookDetail: View {
                             Spacer()
                             Text(book.details.note6)
                                 .foregroundColor(Color("text"))
-                                .font(.subheadline)
+                                .font(Font.custom("Tajawal-Regular", size: 16))
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: 900, alignment: .leading)
+                                .lineSpacing(10)
 
                             
                         }

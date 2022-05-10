@@ -18,16 +18,19 @@ struct BookRow: View {
                 Text("\(book.post_name)")
                     .foregroundColor(Color.black)
                     .lineLimit(2)
-                    .padding(.all, 1.0)
+                    .padding(.all, 2.0)
                     .scaledToFit()
+                    .font(Font.custom("Tajawal-Regular", size: 18))
+
 
                 
                 Text("\(book.details.author_name)")
-                    .font(.subheadline)
                     .foregroundColor(Color(red: 0.4392156862745098, green: 0.4392156862745098, blue: 0.4392156862745098))
                     .lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                    .padding(.all, 1.0)
+                    .padding(.all, 2.0)
                     .scaledToFit()
+                    .font(Font.custom("Tajawal-Regular", size: 14))
+
             }
         }
     }

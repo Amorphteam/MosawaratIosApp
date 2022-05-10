@@ -9,7 +9,7 @@ import Foundation
 import Network
 
 
-@MainActor class ModelData: ObservableObject  {
+@MainActor class ModelData:ObservableObject  {
     var updateDate: Data? = nil
     @Published var books = [Book]()
     var lastUpdate: String? = nil
@@ -17,7 +17,7 @@ import Network
     var urlUpdate = "http://al-mostafa.co/makhtot/wp-json/fr-api/v1/last-update"
     
     
-    init(){
+     init(){
         // For get online data
         if InternetConnectionManager.isConnectedToNetwork(){
             

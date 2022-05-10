@@ -12,6 +12,7 @@
 		FA29A6E6281D767900FAC0AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA29A6E5281D767900FAC0AB /* GoogleService-Info.plist */; };
 		FA432E842809DA98005481ED /* SelecteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA432E832809DA98005481ED /* SelecteImage.swift */; };
 		FA432E862809EF41005481ED /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA432E852809EF41005481ED /* ZoomableScrollView.swift */; };
+		FA80C9FB282A64E300EF8E1D /* tajwal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA80C9FA282A64E300EF8E1D /* tajwal.ttf */; };
 		FAB9CF9C281BD65600D64DD5 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9CF9B281BD65600D64DD5 /* Update.swift */; };
 		FAB9CF9E281BD70000D64DD5 /* lastUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB9CF9D281BD70000D64DD5 /* lastUpdate.json */; };
 		FAD05C9E281C1E770071F7FA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD05C9D281C1E770071F7FA /* Launch Screen.storyboard */; };
@@ -53,6 +54,7 @@
 		FA29A6E5281D767900FAC0AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA432E832809DA98005481ED /* SelecteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteImage.swift; sourceTree = "<group>"; };
 		FA432E852809EF41005481ED /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		FA80C9FA282A64E300EF8E1D /* tajwal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tajwal.ttf; sourceTree = "<group>"; };
 		FAB9CF9B281BD65600D64DD5 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		FAB9CF9D281BD70000D64DD5 /* lastUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lastUpdate.json; sourceTree = "<group>"; };
 		FAD05C9D281C1E770071F7FA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA80C9F9282A64B700EF8E1D /* Project_fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA80C9FA282A64E300EF8E1D /* tajwal.ttf */,
+			);
+			path = Project_fonts;
+			sourceTree = "<group>";
+		};
 		FADEFCBE2806095F00262772 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		FADEFCC92806095F00262772 /* HajariAlmustafaProject */ = {
 			isa = PBXGroup;
 			children = (
+				FA80C9F9282A64B700EF8E1D /* Project_fonts */,
 				FADEFD0E28061B0200262772 /* bookData.json */,
 				FAB9CF9D281BD70000D64DD5 /* lastUpdate.json */,
 				FA29A6E5281D767900FAC0AB /* GoogleService-Info.plist */,
@@ -304,6 +315,7 @@
 			files = (
 				FADEFCD22806096000262772 /* Preview Assets.xcassets in Resources */,
 				FADEFCCF2806096000262772 /* Assets.xcassets in Resources */,
+				FA80C9FB282A64E300EF8E1D /* tajwal.ttf in Resources */,
 				FAB9CF9E281BD70000D64DD5 /* lastUpdate.json in Resources */,
 				FAD05C9E281C1E770071F7FA /* Launch Screen.storyboard in Resources */,
 				FADEFD0F28061B0200262772 /* bookData.json in Resources */,

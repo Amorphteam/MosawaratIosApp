@@ -12,7 +12,7 @@ struct BookList: View {
     @ObservedObject var datas = ModelData()
     let appearance = UINavigationBarAppearance()
     @State private var selectedItemId: UUID?
-    
+    @State private var testid = 0
     
     
     init() {
@@ -53,7 +53,8 @@ struct BookList: View {
     }
     
     var body: some View {
-        
+        if (testid == 1){
+
         NavigationView {
             VStack {
                 List {
@@ -78,12 +79,6 @@ struct BookList: View {
                       
                 }
                 
-                .onAppear {
-                    // Set the default to clear
-                    UITableView.appearance().backgroundColor = UIColor(Color("Background"))
-                    
-                }
-                
             }
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("Background")/*@END_MENU_TOKEN@*/)
             
@@ -94,10 +89,76 @@ struct BookList: View {
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),prompt: "ابحث عن عنوان المخطوطة أو مؤلفها أو مصدرها") {
             
         }
+            
         .accentColor(.white)
         .font(Font.custom("Tajawal-Regular", size: 16))
         .environment(\.layoutDirection, .rightToLeft)
         
+        .onAppear {
+            UITableView.appearance().backgroundColor = UIColor(Color("Background"))
+
+            // Set the default to clear
+            let device = UIDevice.current
+            if device.model == "iPad" && device.orientation.isPortrait{
+                   testid = 1
+               } else {
+                    testid = 0
+               }
+            
+        }
+        }else {
+            NavigationView {
+                VStack {
+                    List {
+                        ForEach(searchResults, id: \.self) { bookItem in
+                            
+                            NavigationLink(
+                                
+                                tag: bookItem.id ,
+                                selection: self.$selectedItemId) {
+                                    BookDetail(book: bookItem)
+                                } label: {
+                                    BookRow(book: bookItem)
+                                }
+                                .listRowBackground(
+                                    bookItem.id == self.selectedItemId ? Color(UIColor(Color("Primary2"))) : Color(UIColor(Color("Background")))
+                                )
+                            
+                        }
+                        
+                        .listRowBackground(Color("Background"))
+                        .navigationBarTitle(Text("قائمة المخطوطات").font(.subheadline), displayMode: .large)
+                          
+                    }
+                    
+                }
+                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("Background")/*@END_MENU_TOKEN@*/)
+                
+            }
+            
+            
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),prompt: "ابحث عن عنوان المخطوطة أو مؤلفها أو مصدرها") {
+                
+            }
+                
+            .accentColor(.white)
+            .font(Font.custom("Tajawal-Regular", size: 16))
+            .environment(\.layoutDirection, .rightToLeft)
+            
+            .onAppear {
+                UITableView.appearance().backgroundColor = UIColor(Color("Background"))
+
+                // Set the default to clear
+                let device = UIDevice.current
+                if device.model == "iPad" && device.orientation.isPortrait{
+                       testid = 1
+                   } else {
+                        testid = 0
+                   }
+                
+            }
+        }
+
     }
     
     
